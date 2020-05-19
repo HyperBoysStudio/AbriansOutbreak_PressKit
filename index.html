@@ -11,37 +11,133 @@
 			<h1 class="main-title">Abrian's Outbreak Presskit</h1>
 		</div>
 	
+		
 		<div id="div-index">
-			<button type="button" class="btn btn-primary moded-button">Description</button>
-			<button type="button" class="btn btn-light moded-button">Videos</button>
-			<button type="button" class="btn btn-light moded-button">Images</button>
-			<button type="button" class="btn btn-light moded-button">Contact</button>
+			<button id="button-description" type="button" class="btn moded-button" onclick="showDescription()">Description</button>
+			<button id="button-videos" type="button" class="btn moded-button" onclick="showVideos()">Videos</button>
+			<button id="button-images" type="button" class="btn moded-button" onclick="showImages()">Images</button>
+			<button id="button-contact" type="button" class="btn moded-button" onclick="showContact()">Contact</button>
 			
 		</div>
+			
 		
-        <div id="div-intro" class="moded-div">
-            <p class="moded-text">Abrian's Outbreak is an action stealth puzzle game based in a fantasy world
-			filled with fairies, deamons, elfs, dwarfs and robotic guards that wont let our
-			character escape from the complicated walls of the greatest prison in the realm.
+		<div id="div-intro" class="moded-div">
+			<p class="moded-text">
+				Abrian's Outbreak is an action stealth puzzle game based in a fantasy world
+				filled with fairies, deamons, elfs, dwarfs and robotic guards that wont let our
+				character escape from the complicated walls of the greatest prison in the realm.
 			</p>
-        </div>
-		
-		<div id="div-description">
-		
 		</div>
 
-		<div id="div-videos">
+		<div id="div-description" class="moded-div">
+			<h4 class="moded-text">
+				- KEY FEATURES -
+			</h4>
+			
+			<p class="moded-text">
+				<b>Talk</b> to prisoners to extract valuable information.
+			</p>
+			
+			<p class="moded-text">
+				<b>Tempt</b> the prisoners to make them fight to mislead the guards.
+			</p>
+			
+			<p class="moded-text">
+				<b>Steal</b> objects when noone's watching.
+			</p>
+			
+			<p class="moded-text">
+				<b>Bribe</b> them to make your way out!
+			</p>
+		</div>
+
+		<div id="div-videos" class="moded-div">
 		
 		</div>
 		
-		<div id="div-images">
+		<div id="div-images" class="moded-div">
 		
 		</div>
 		
-		<div id="div-contact">
+		<div id="div-contact" class="moded-div">
 		
 		</div>
 		
+		
+		<script>
+			var dom_intro = document.getElementById("div-intro");
+			var dom_description = document.getElementById("div-description");
+			var dom_images = document.getElementById("div-images");
+			var dom_videos = document.getElementById("div-videos");
+			var dom_contact = document.getElementById("div-contact");
+			var button_description = document.getElementById("button-description");
+			var button_videos = document.getElementById("button-videos");
+			var button_images = document.getElementById("button-images");
+			var button_contact = document.getElementById("button-contact");
+			
+			function showDescription() {
+				dom_images.style.display = "none";
+				dom_videos.style.display = "none";
+				dom_contact.style.display = "none";
+				dom_intro.style.display = "block";
+				dom_description.style.display = "block";
+				button_description.classList.remove("btn-primary", "btn-light");
+				button_videos.classList.remove("btn-primary", "btn-light");
+				button_contact.classList.remove("btn-primary", "btn-light");
+				button_images.classList.remove("btn-primary", "btn-light");
+				button_videos.classList.add("btn-light");
+				button_contact.classList.add("btn-light");
+				button_images.classList.add("btn-light");
+				button_description.classList.add("btn-primary");
+			}
+			function showImages() {
+				dom_videos.style.display = "none";
+				dom_contact.style.display = "none";
+				dom_intro.style.display = "none";
+				dom_description.style.display = "none";
+				dom_images.style.display = "block";
+				button_description.classList.remove("btn-primary", "btn-light");
+				button_videos.classList.remove("btn-primary", "btn-light");
+				button_contact.classList.remove("btn-primary", "btn-light");
+				button_images.classList.remove("btn-primary", "btn-light");
+				button_videos.classList.add("btn-light");
+				button_contact.classList.add("btn-light");
+				button_description.classList.add("btn-light");
+				button_images.classList.add("btn-primary");
+			}
+			function showVideos() {
+				dom_images.style.display = "none";
+				dom_contact.style.display = "none";
+				dom_intro.style.display = "none";
+				dom_description.style.display = "none";
+				dom_videos.style.display = "block";
+				button_description.classList.remove("btn-primary", "btn-light");
+				button_videos.classList.remove("btn-primary", "btn-light");
+				button_contact.classList.remove("btn-primary", "btn-light");
+				button_images.classList.remove("btn-primary", "btn-light");
+				button_contact.classList.add("btn-light");
+				button_images.classList.add("btn-light");
+				button_description.classList.add("btn-light");
+				button_videos.classList.add("btn-primary");
+			}
+			function showContact() {
+				dom_images.style.display = "none";
+				dom_videos.style.display = "none";
+				dom_intro.style.display = "none";
+				dom_description.style.display = "none";
+				dom_contact.style.display = "block";
+				button_description.classList.remove("btn-primary", "btn-light");
+				button_videos.classList.remove("btn-primary", "btn-light");
+				button_contact.classList.remove("btn-primary", "btn-light");
+				button_images.classList.remove("btn-primary", "btn-light");
+				button_videos.classList.add("btn-light");
+				button_images.classList.add("btn-light");
+				button_description.classList.add("btn-light");
+				button_contact.classList.add("btn-primary");
+			}
+			
+			showDescription();
+		</script>
     </body>
 
 </html>
