@@ -1,41 +1,96 @@
-@font-face {
-  font-family: arcade-font;
-  src: url('fonts/ARCADECLASSIC.TTF')
-	format('truetype');
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-@keyframes font-color-animation {
-    0% {color: #fff;}
-    50% {color: #ffa;}
-    100% {color: #fff;}
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 
-@keyframes background-color-full-animation {
-    0% {background-color: rgba(255, 0, 0, 0.6);}
-    20% {background-color: rgba(255, 235, 122, 0.6);}
-    40% {background-color: rgba(117, 255, 62, 0.6);}
-    60% {background-color: rgba(68, 243, 255, 0.6);}
-    80% {background-color: rgba(107, 81, 255, 0.6);}
-    100% {background-color: rgba(255, 0, 0, 0.6);}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-
-@keyframes color-full-animation {
-    0% {color: rgb(255, 0, 0);}
-    20% {color: rgb(255, 235, 122);}
-    40% {color: rgb(117, 255, 62);}
-    60% {color: rgb(68, 243, 255);}
-    80% {color: rgb(107, 81, 255);}
-    100% {color: rgb(255, 0, 0);}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-@keyframes title-color-full-animation {
-    0% {color: rgba(255, 0, 0, 1);}
-    20% {color: rgba(255, 235, 122, 1);}
-    40% {color: rgba(117, 255, 62, 1);}
-    60% {color: rgba(68, 243, 255, 1);}
-    80% {color: rgba(107, 81, 255, 1);}
-    100% {color: rgba(255, 0, 0, 1);}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 body {
@@ -86,4 +141,8 @@ body {
     animation: title-color-full-animation;
     color: white;
     margin: 20px;
+}
+
+#div-images {
+	width: 50%;
 }
