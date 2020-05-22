@@ -109,7 +109,7 @@ body {
     /* color */
     background-color: #000;
     background-image: url("abrians_wallback.jpg");
-    background-position: center;    /* center the image */
+    /*background-position: center;    /* center the image */
     background-repeat: no-repeat;   /* do not repeat the image */
     background-size: cover;         /* resize the background image to cover the entire container */
 }
@@ -145,4 +145,11 @@ body {
 
 #div-images {
 	width: 50%;
+}
+
+.div-centered {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 3%;
 }
